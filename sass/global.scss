@@ -1,0 +1,53 @@
+/**
+ * 2. GLOBAL
+ * -----------------------------------------------------------------------------
+ */
+body,
+button,
+input,
+select,
+textarea {
+	color: $font__body-color;
+	font-family: $font_1;
+	font-weight: 300;
+	font-size: 15px; 
+	font-style: normal;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+body {
+	background: $color_bg;
+}
+
+.font__color-1{
+	color: $color_1;
+}
+
+/* BUTTONS */
+
+:focus {
+    outline: none;
+}
+
+.btn{
+	font-size: 14px;
+	color: $white;
+	padding: 15px 35px;
+    border: 0;
+    font-weight: 500;
+}
+.btn-primary{
+    background-color: $color_1 !important;
+    @extend .btn;
+    color: $white !important;
+    border-radius: 30px;
+	&:active,
+	&:hover{
+		background-color: $color_1 !important;
+    	color: $white !important;
+	}
+}

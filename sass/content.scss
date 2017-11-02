@@ -1,0 +1,121 @@
+/**
+ * 1. CONTENT
+ * -----------------------------------------------------------------------------
+ */
+ $overlap : 40px;
+
+.sidebar-show .sidebar {
+    left: 0
+}
+
+.sidebar{
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	width: 260px;
+	height: 100%;
+	float: left;
+	background-color: $color_1;
+	position: fixed;
+	left: -260px;;
+	z-index: 999;
+}
+
+
+.wrap-content{
+ 	position: relative;
+	height: calc(100% - #{$headerTinggi} + #{$overlap});
+	z-index: 10;
+	margin-top: - $overlap;
+	width: 100%;
+	> .container-fluid{
+		
+	}
+	&.content-scroll{
+		overflow: auto;
+	}
+}
+ .content{
+	display: block;
+ }
+
+ .box{
+ 	background-color: $white;
+ 	position: relative;
+ 	border-radius: 10px;
+	margin-bottom: 25px;
+ 	&:after{
+ 		content: '';
+ 		width: 99%;
+ 		height: 10px;
+ 		background-color: $color_shadow;
+		position: absolute;
+ 		bottom: -10px;
+ 		border-radius: 0 0 10px 10px;
+ 		left: .5%;
+	    -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    	box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+ 	}
+ 	.title{
+ 		font-size: 24px;
+ 		color: $color_1;
+ 	}
+ 	.title-subtotal{
+ 		font-size: 28px;
+ 		color: $color_1;
+ 		font-weight: 900;
+ 		text-align: right;
+ 		float: right;
+ 	}
+ 	&.single{
+		padding: 24px 10px;
+ 	}
+ 	&.tabel{
+ 		padding: 0 10px;
+ 		> .row{
+ 			margin-right: -10px;
+  			margin-left: -10px;
+ 			border-bottom: 1px solid $color_shadow;
+
+ 			> [class^="col-"],
+			> [class*=" col-"]{
+ 				padding: 10px 10px;
+				border-right: 1px solid $color_shadow;
+				&:last-child{
+					border-right: 0;
+				}
+			}
+ 		}
+ 		.footer{
+ 			background-color: #f9f9f9;
+ 			border-radius: 0 0 10px 10px;
+ 		}
+ 	}
+ }
+.btn-date{
+	color: $color_1;
+	text-align: right;
+	.caret{
+		background-color: #f8f8f8;
+	}
+}
+.btn.btn-fab i.ic, .input-group-btn .btn.btn-fab i.ic {
+    position: absolute;
+    top: 50%;
+     left: 50%; 
+    -webkit-transform: translate(-18px, -16px);
+    -ms-transform: translate(-18px, -16px);
+    -o-transform: translate(-18px, -16px);
+    transform: translate(-18px, -16px);
+     line-height: 28px; 
+    width: 28px;
+}
+.btn i.ic, .input-group-btn .btn i.ic {
+    vertical-align: middle;
+}
+
+ .addunit{
+ 	color: $color_1;
+ }
