@@ -233,6 +233,41 @@ body {
     background-color: #bf1e2e !important;
     color: #ffffff !important; }
 
+.spacer-10 {
+  height: 10px; }
+  .spacer-10::after {
+    display: block;
+    content: "";
+    clear: both; }
+
+.spacer-30 {
+  height: 30px; }
+  .spacer-30::after {
+    display: block;
+    content: "";
+    clear: both; }
+
+.spacer-50 {
+  height: 50px; }
+  .spacer-50::after {
+    display: block;
+    content: "";
+    clear: both; }
+
+.spacer-70 {
+  height: 70px; }
+  .spacer-70::after {
+    display: block;
+    content: "";
+    clear: both; }
+
+.spacer-90 {
+  height: 70px; }
+  .spacer-90::after {
+    display: block;
+    content: "";
+    clear: both; }
+
 /**
  * 3. HEADER-NAV
  * -----------------------------------------------------------------------------
@@ -350,22 +385,32 @@ body {
 .content {
   display: block; }
 
+.shadow-box, .box:after {
+  content: '';
+  width: 96%;
+  height: 10px;
+  background-color: #e9e9e9;
+  position: absolute;
+  bottom: -10px;
+  border-radius: 0 0 10px 10px;
+  left: 2%;
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1); }
+
+.panah, .box.item-tracking:before, .box.history .detail:after {
+  font-family: "i-webfont";
+  content: '\e870';
+  color: #bf1e2e;
+  font-size: 34px;
+  -webkit-transform: rotate(-180deg) translateY(50%);
+  -ms-transform: rotate(-180deg) translateY(50%);
+  transform: rotate(-180deg) translateY(50%); }
+
 .box {
   background-color: #ffffff;
   position: relative;
   border-radius: 10px;
   margin-bottom: 25px; }
-  .box:after {
-    content: '';
-    width: 96%;
-    height: 10px;
-    background-color: #e9e9e9;
-    position: absolute;
-    bottom: -10px;
-    border-radius: 0 0 10px 10px;
-    left: 2%;
-    -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1); }
   .box .title {
     font-size: 24px;
     color: #bf1e2e; }
@@ -393,12 +438,159 @@ body {
     .box.tabel .footer {
       background-color: #f9f9f9;
       border-radius: 0 0 10px 10px; }
+  .box.item-tracking {
+    padding: 20px 10px; }
+    .box.item-tracking a {
+      display: block;
+      text-decoration: none; }
+    .box.item-tracking .meta-date {
+      color: #878787; }
+    .box.item-tracking .body {
+      font-size: 35px;
+      font-weight: 900;
+      color: #bf1e2e; }
+      .box.item-tracking .body span {
+        font-size: 30px;
+        font-weight: 300; }
+    .box.item-tracking:before {
+      position: absolute;
+      top: 50%;
+      right: 10px; }
+    .box.item-tracking:hover {
+      background-color: #f9f9f9; }
+  .box.history {
+    padding: 10px 0;
+    position: relative; }
+    .box.history .item {
+      padding: 10px 10px;
+      border-bottom: 1px solid #e7e7e7; }
+      .box.history .item:last-child {
+        border-bottom: 0; }
+    .box.history .nopol, .box.history .kurir {
+      color: #df3143;
+      font-weight: 900;
+      margin-left: 40px;
+      margin-bottom: 10px;
+      position: relative; }
+      .box.history .nopol:before, .box.history .kurir:before {
+        font-family: "i-webfont";
+        content: '\e868';
+        color: #df3143;
+        font-size: 24px;
+        position: absolute;
+        left: -35px;
+        top: -5px; }
+      .box.history .nopol span, .box.history .kurir span {
+        font-weight: 300;
+        display: block;
+        color: #878787; }
+    .box.history .kurir:before {
+      font-family: "i-webfont";
+      content: '\e869'; }
+    .box.history .kurir span {
+      display: inline-table; }
+    .box.history .detail {
+      position: absolute;
+      top: 50%;
+      right: 40px;
+      color: #df3143;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      font-weight: 900; }
+      .box.history .detail:after {
+        position: absolute;
+        top: 50%;
+        right: -28px;
+        font-weight: 400; }
+      .box.history .detail.complete {
+        color: #878787; }
+
+.box-overlap {
+  margin-top: -40px;
+  position: relative;
+  z-index: 9999; }
+
+.map {
+  height: 350px;
+  margin-left: -15px;
+  margin-right: -15px; }
+
+.ket-peta .item {
+  padding: 20px 0; }
+.ket-peta .no {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: red;
+  color: #ffffff;
+  text-align: center;
+  display: inline-table;
+  border: 4px solid #ffffff;
+  font-size: 28px;
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  margin-top: -8px;
+  margin-right: 8px; }
+.ket-peta .meta {
+  font-weight: 900;
+  color: red;
+  display: inline-table;
+  vertical-align: middle; }
+  .ket-peta .meta span {
+    display: block;
+    font-weight: 300;
+    color: #878787; }
+  .ket-peta .meta.note {
+    float: right;
+    border-left: 1px solid #ccc;
+    padding-left: 10px;
+    min-width: 100px; }
 
 .btn-date {
   color: #bf1e2e;
   text-align: right; }
   .btn-date .caret {
     background-color: #f8f8f8; }
+
+.tabs-tracking {
+  background-color: #ffffff;
+  position: relative;
+  border-radius: 10px;
+  /*margin-bottom: 25px;*/
+  color: #878787;
+  text-align: center;
+  position: relative;
+  	/*&:after{
+   		@extend .shadow-box;
+   	}*/ }
+  .tabs-tracking > li {
+    width: 50%; }
+    .tabs-tracking > li a {
+      color: #878787 !important;
+      padding: 24px 0;
+      font-weight: 500; }
+      .tabs-tracking > li a:hover {
+        color: #bf1e2e !important; }
+    .tabs-tracking > li.active a {
+      color: #bf1e2e !important;
+      background-color: #f0f0f0 !important; }
+    .tabs-tracking > li:nth-child(odd) a {
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px; }
+    .tabs-tracking > li:nth-child(even) a {
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px; }
+
+.shadow-tab {
+  width: 96%;
+  height: 10px;
+  margin: 0 auto;
+  background-color: #e9e9e9;
+  border-radius: 0 0 10px 10px;
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 25px; }
 
 .btn.btn-fab i.ic, .btn-fab.btn-primary i.ic, .input-group-btn .btn.btn-fab i.ic, .input-group-btn .btn-fab.btn-primary i.ic {
   position: absolute;

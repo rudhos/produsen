@@ -217,3 +217,11 @@ $white: #ffffff;
 /* 'εáÇ' */
 .icon-enav-30:before {
   content: '\e870'; }
+
+@mixin clearfix() {
+  &::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+}
