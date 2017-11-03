@@ -27,10 +27,17 @@ body {
 	color: $color_1;
 }
 
+a, a:hover, a:active, a:focus{
+	color: $color_2;
+	text-decoration: none;
+	outline: 0;
+}
+
 /* BUTTONS */
 
 :focus {
-    outline: none;
+    outline: none !important;
+    outline: 0 !important;
 }
 
 .btn{
